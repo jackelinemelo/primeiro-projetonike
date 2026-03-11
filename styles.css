@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    /* espaçamento zera todos as margens  */
+    padding: 0;
+    /* espaçamento zera todos os lados */
+    background: #ccee66;
+    /* cor de fundo */
+    color: white;
+    /* cor do texto */
+    padding: 20px 160px;
+    /* aplica o formato em cima em baixo e o segundo nos dois lados*/
+    height: 100vh;
+    /* altura * 100vh (ocupa a imagem a tela toda)*/
+    /* after (depois) e before (depois) */
+    font-family: "Noto Sans", sans-serif;
+
+    overflow: hidden;
+    /* tudo que sobra (esconde os quadrados etc... */
+
+}
+
+body::before {
+    content: "";
+    /* conteudo */
+    background: #202020;
+    position: absolute;
+    /* posição que deseja */
+    top: 0;
+    left: -600px;
+    /* 40em (parente do px)*/
+    transform: rotate(-70deg);
+    width: 100%;
+    height: 120%;
+
+    /* after (depois) e before (depois) */
+
+}
+
+body::after {
+    content: 'Nike';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Coloca o nome da nike no centro, junto com top e left 50% */
+    color: black;
+    font-size: 250px;
+    font-weight: bold;
+    /* grossura da fonte(letra) */
+    opacity: 0.5;
+    /* 1 é completamento invisivel é 0.5 começa a clarear */
+
+}
+
+.logo {
+    /*toda vez que for logo tenho que colocar .logo (nome da classe)  */
+    width: 80px;
+    /* largura  */
+}
+
+h4 {
+    font-size: 30px;
+    /*tamhano do texto */
+}
+
+h1 {
+    font-size: 80px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    /* margem em baixo (distanciamento)
+        margin-top ( distanciamento em cima)
+        margin-botton (em baixo)
+        margin-left (para esquerda)
+        margin-right (para diretira)*/
+}
+
+.botao-carrinho {
+    background: #a3be52;
+    padding: 10px 20px;
+    border-radius: 20px;
+    /*bordas arredondadas*/
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    /*quando passa o mouse em cima e fic uma mãozinha */
+    transition: 0.5s;
+    /*tempo que o icone muda a cor ao apertar o botao*/
+}
+
+.botao-carrinho:hover {
+    opacity: 0.7;
+    /*transparencia do incone
+      1 - visil e 0 - invisivel*/
+}
+
+.imagem-tenis {
+    width: 800px;
+    transform: rotate(-25deg);
+    /*deixar o objeto inclinado + ou - */
+    filter: drop-shadow(30px 45px 40px #161616);
+    /*sombra ao entorno da imagem */
+    transition: 1s;
+}
+
+.troca-efeito {
+    opacity: 0;
+    transform: rotate(-26deg) translate(-30px);
+}
+
+.caixa-principal {
+    display: flex;
+    /*abilita uma imagem ou texto um do lado do outro*/
+    justify-content: space-between;
+    /*justifica o conteudo, alinha na horizontal space -between (espaco entre)*/
+    align-items: center;
+    /*alinhar no centro*/
+    height: 75%;
+    position: relative;
+    z-index: 1;
+    /* sobrepoe para frente as letras ou imagens, obs: só pode usar o z-index se 
+    o position:relative colocar*/
+}
+
+.caixa-texto {
+    max-width: 500px;
+    /*largura maxima*/
+}
+
+.caixa-botoes {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    gap: 20px;
+    /*espaço entre uma imagem*/
+
+}
+
+.botoes {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    /*arredonda as bordas*/
+    cursor: pointer;
+    /*ao clicar aparece a maozinha*/
+}
+
+.botoes:active {
+    opacity: 0.6;
+}
+
+.verde {
+    background: #ccee66;
+
+}
+
+.azul {
+    background: #58cced;
+
+}
+
+.rosa {
+    background: #ff9eb5;
+}
